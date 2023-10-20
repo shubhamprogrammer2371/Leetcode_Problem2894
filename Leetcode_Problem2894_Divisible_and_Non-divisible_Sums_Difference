@@ -1,0 +1,22 @@
+int differenceOfSums(int n, int m) {
+    int not_divisible = 0 , divisible = 0;
+    for( int i = 1 ; i <= n ; i++)
+    {
+        if(!(i%m))
+            divisible += i;
+        else
+            not_divisible += i;
+    }
+    return (not_divisible - divisible);
+}
+
+
+--------------------------------------------------------------------------------------
+
+
+int differenceOfSums(int n, int m) {
+    int ans = 0;
+    for ( int i = 1 ; i <= n ; i++) 
+        ans = (!(i%m)) ? ans - i : ans + i;
+    return ans;
+}
